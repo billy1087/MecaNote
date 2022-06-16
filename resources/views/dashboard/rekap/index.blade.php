@@ -56,7 +56,7 @@
                     <tr class="text-center">
                         <th scope="col">NO</th>
                         <th scope="col">Bulan</th>
-                        <th scope="col">Pemasukam</th>
+                        <th scope="col">Pemasukan</th>
                         <th scope="col">Pengeluaran</th>
                         <th scope="col">Hutang</th>
                         <th scope="col">Piutang</th>

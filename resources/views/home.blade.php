@@ -66,10 +66,10 @@
         </div>
         <div class="row justify-content-center fs-5 text-center">
           <div class="col-4">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum temporibus, debitis ipsa neque vel rerum! Officia quia corporis totam voluptatibus?</p>
+            <p>MecaNote merupakan website untuk memudahkan Mecana Honey dalam melakukan pencatatan keuangan</p>
           </div>
           <div class="col-4">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam error quas alias enim, mollitia repudiandae nam, maxime pariatur distinctio, nostrum sint officia! Veniam, blanditiis vitae!</p>
+            <p>Pemilik Mecana Honey sendiri adalah Ibu Hastin Anita Sari. Mecana Honey berada pada Kabupaten Jember, Jawa Timur </p>
           </div>
         </div>
       </div>

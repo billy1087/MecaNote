@@ -8,7 +8,7 @@
     <div class="dropdown ml-2 text-center mb-3">
         <a class="btn btn-secondary dropdown-toggle px-5" type="a" id="dropdownMenu2" data-toggle="dropdown"
             aria-expanded="false">
-            Pecatatan
+            Pencatatan
         </a>
         <div class="dropdown-menu mx-5" aria-labelledby="dropdownMenu2">
             <a class="dropdown-item " href="/pemasukan">Pemasukan</a>
