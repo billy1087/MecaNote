@@ -18,8 +18,9 @@ class ProfilController extends Controller
     public function edit($id)
     {
         //
+        
         return view('dashboard.profil.edit', [
-            'profil' => User::where('id', $id)->get()
+            'profil' => User::where('id', $id)->get(),
         ]);
     }
 
