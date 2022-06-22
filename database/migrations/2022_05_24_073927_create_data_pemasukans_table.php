@@ -18,7 +18,7 @@ class CreateDataPemasukansTable extends Migration
             $table->foreignId('id_akun');
             $table->string('nama_pemasukan', 30);
             $table->smallInteger('jumlah');
-            $table->float('harga_satuan');
+            $table->double('harga_satuan');
             $table->string('keterangan', 50);
             $table->timestamps();
 
