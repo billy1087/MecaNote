@@ -19,7 +19,7 @@
     </div>
     @if (auth()->user()->role == 'admin')
         <div class="dropdown ml-2 mb-3 text-center">
-            <a class="btn btn-secondary dropdown-toggle px-5" type="a" id="dropdownMenu3" data-toggle="dropdown"
+            <a class="btn btn-secondary dropdown-toggle" style="padding-left: 2.7rem; padding-right: 2.7rem" type="a" id="dropdownMenu3" data-toggle="dropdown"
                 aria-expanded="false">
                 Keuangan
             </a>

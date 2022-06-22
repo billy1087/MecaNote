@@ -21,7 +21,7 @@
                 <input type="hidden" name="id_akun" value="{{ auth()->user()->id }}">
                 <div class="form-group">
                     <label>Judul Panduan</label>
-                    <input type="text" name="judul_panduan" class="form-control" placeholder="Judul Panduan" required>
+                    <input type="text" name="judul_panduan" class="form-control" placeholder="Judul Panduan">
                 </div>
                 <div class="form-group">
                     <label>isi Panduan</label>
