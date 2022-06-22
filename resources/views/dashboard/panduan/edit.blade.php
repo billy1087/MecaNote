@@ -18,7 +18,7 @@
                     <div class="form-group">
                         <label>Judul Panduan</label>
                         <input type="text" value="{{ $pnd->judul_panduan }}" name="judul_panduan" class="form-control"
-                            placeholder="Judul Panduan" required>
+                            placeholder="Judul Panduan">
                     </div>
                     <div class="form-group">
                         <label>isi Panduan</label>

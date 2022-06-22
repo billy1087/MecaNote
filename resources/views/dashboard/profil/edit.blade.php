@@ -22,21 +22,43 @@
                     @csrf
                     <div class="form-group">
                         <label>Nama</label>
-                        <input type="text" name="nama" value="{{ $prf->nama }}" class="form-control text-capitalize"
-                            required>
+                        <input type="text" name="nama" value="{{ $prf->nama }}"
+                            class="form-control text-capitalize @error('nama') is-invalid @enderror">
+                        @error('nama')
+                            <div class="invalid-feedback text-capitalize">
+                                {{ $message }}
+                            </div>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label>Email</label>
-                        <input type="text" class="form-control" name="email" value="{{ $prf->email }}" required>
+                        <input type="text" class="form-control @error('email') is-invalid @enderror" name="email"
+                            value="{{ $prf->email }}">
+                        @error('email')
+                            <div class="invalid-feedback text-capitalize">
+                                {{ $message }}
+                            </div>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label>Password</label>
-                        <input type="password" class="form-control" name="password" placeholder="*******">
+                        <input type="password" class="form-control @error('password') is-invalid @enderror" name="password"
+                            placeholder="*******">
+                        @error('password')
+                            <div class="invalid-feedback text-capitalize">
+                                {{ $message }}
+                            </div>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label>Nomor Telepon</label>
-                        <input type="text" class="form-control" name="no_telepon" value="{{ $prf->no_telepon }}"
-                            required>
+                        <input type="text" class="form-control @error('no_telepon') is-invalid @enderror"
+                            name="no_telepon" value="{{ $prf->no_telepon }}">
+                        @error('no_telepon')
+                            <div class="invalid-feedback text-capitalize">
+                                {{ $message }}
+                            </div>
+                        @enderror
                     </div>
                     <a href="/dashboard" class="btn btn-success">Kembali</a>
                     <button type="submit" class="btn btn-success mx-3 px-4">Ubah</button>

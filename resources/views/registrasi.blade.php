@@ -16,7 +16,6 @@
         body {
             background-image: url("https://www.desktopbackground.org/download/1920x1080/2013/08/04/618044_orange-abstract-backgrounds-vector_5000x4000_h.jpg");
         }
-
     </style>
 </head>
 
@@ -25,34 +24,52 @@
         <div class="card login-form">
             <div class="card-body">
                 <h1 class="card-title text-center">D A F T A R</h1>
-                <div class="text">
-                    <form method="post" action="/registrasi">
-                        @csrf
-                        <div class="form-group mb-3">
-                            <label>Nama</label>
-                            <input type="text" name="nama" class="form-control" required>
-                        </div>
-                        <div class="form-group mb-3">
-                            <label>Email</label>
-                            <input type="text" name="email" class="form-control" required>
-                        </div>
-                        <div class="form-group mb-3">
-                            <label>Password</label>
-                            <input type="password" name="password" class="form-control" required>
-                        </div>
-                        <div class="form-group mb-3">
-                            <label>Nomor Telepon</label>
-                            <input type="text" name="no_telepon" class="form-control" required>
-                        </div>
-                        <div class="form-group mb-3 text-center">
-                            <button type="submit" class="btn btn-warning">Daftar</button>
-                        </div>
-                    </form>
-                </div>
-
+                <form method="post" action="/registrasi">
+                    @csrf
+                    <div class="form-group mb-2">
+                        <label>Nama</label>
+                        <input type="text" name="nama" class="form-control @error('nama') is-invalid @enderror">
+                        @error('nama')
+                            <div class="invalid-feedback text-capitalize">
+                                {{ $message }}
+                            </div>
+                        @enderror
+                    </div>
+                    <div class="form-group mb-2">
+                        <label>Email</label>
+                        <input type="text" name="email" class="form-control @error('email') is-invalid @enderror">
+                        @error('email')
+                            <div class="invalid-feedback text-capitalize">
+                                {{ $message }}
+                            </div>
+                        @enderror
+                    </div>
+                    <div class="form-group mb-2">
+                        <label>Password</label>
+                        <input type="password" name="password"
+                            class="form-control @error('password') is-invalid @enderror">
+                        @error('password')
+                            <div class="invalid-feedback text-capitalize">
+                                {{ $message }}
+                            </div>
+                        @enderror
+                    </div>
+                    <div class="form-group mb-2">
+                        <label>Nomor Telepon</label>
+                        <input type="text" name="no_telepon"
+                            class="form-control @error('no_telepon') is-invalid @enderror">
+                        @error('no_telepon')
+                            <div class="invalid-feedback text-capitalize">
+                                {{ $message }}
+                            </div>
+                        @enderror
+                    </div>
+                    <div class="form-group mb-3 text-center">
+                        <button type="submit" class="btn btn-warning">Daftar</button>
+                    </div>
+                </form>
             </div>
         </div>
-    </div>
     </div>
 
 

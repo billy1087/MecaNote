@@ -24,17 +24,17 @@
                     <div class="form-group">
                         <label>Nama Piutang</label>
                         <input type="text" name="nama_piutang" value="{{ $piu->nama_piutang }}" class="form-control"
-                            placeholder="Input Nama Piutang" required>
+                            placeholder="Input Nama Piutang">
                     </div>
                     <div class="form-group">
                         <label>Jumlah</label>
                         <input type="number" name="jumlah" value="{{ $piu->jumlah }}" class="form-control"
-                            placeholder="Input Jumlah" required>
+                            placeholder="Input Jumlah">
                     </div>
                     <div class="form-group">
                         <label>Harga Satuan</label>
                         <input type="number" name="harga_satuan" value="{{ $piu->harga_satuan }}" class="form-control"
-                            placeholder="Input Harga Satuan" required>
+                            placeholder="Input Harga Satuan">
                     </div>
                     <div class="form-group">
                         <label>Keterangan</label>

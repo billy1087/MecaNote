@@ -24,17 +24,17 @@
                     <div class="form-group">
                         <label>Nama Hutang</label>
                         <input type="text" name="nama_hutang" value="{{ $htn->nama_hutang }}" class="form-control"
-                            placeholder="Input Nama Hutang" required>
+                            placeholder="Input Nama Hutang">
                     </div>
                     <div class="form-group">
                         <label>Jumlah</label>
                         <input type="number" name="jumlah" value="{{ $htn->jumlah }}" class="form-control"
-                            placeholder="Input Jumlah" required>
+                            placeholder="Input Jumlah">
                     </div>
                     <div class="form-group">
                         <label>Harga Satuan</label>
                         <input type="number" name="harga_satuan" value="{{ $htn->harga_satuan }}" class="form-control"
-                            placeholder="Input Harga Satuan" required>
+                            placeholder="Input Harga Satuan">
                     </div>
                     <div class="form-group">
                         <label>Keterangan</label>

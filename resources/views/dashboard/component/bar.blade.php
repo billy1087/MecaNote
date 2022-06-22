@@ -6,7 +6,7 @@
         </li>
     </ul>
     <div class="dropdown ml-2 text-center mb-3">
-        <a class="btn btn-secondary dropdown-toggle px-5" type="a" id="dropdownMenu2" data-toggle="dropdown"
+        <a class="btn btn-secondary dropdown-toggle" style="padding-left: 2.5rem; padding-right: 2.5rem" type="a" id="dropdownMenu2" data-toggle="dropdown"
             aria-expanded="false">
             Pencatatan
         </a>

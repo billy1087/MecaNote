@@ -24,17 +24,17 @@
                     <div class="form-group">
                         <label>Nama Pengeluaran</label>
                         <input type="text" name="nama_pengeluaran" value="{{ $pnl->nama_pengeluaran }}"
-                            class="form-control" placeholder="Input Nama Pengeluaran" required>
+                            class="form-control" placeholder="Input Nama Pengeluaran">
                     </div>
                     <div class="form-group">
                         <label>Jumlah</label>
                         <input type="number" name="jumlah" value="{{ $pnl->jumlah }}" class="form-control"
-                            placeholder="Input Jumlah" required>
+                            placeholder="Input Jumlah">
                     </div>
                     <div class="form-group">
                         <label>Harga Satuan</label>
                         <input type="number" name="harga_satuan" value="{{ $pnl->harga_satuan }}" class="form-control"
-                            placeholder="Input Harga Satuan" required>
+                            placeholder="Input Harga Satuan">
                     </div>
                     <div class="form-group">
                         <label>Keterangan</label>
