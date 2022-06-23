@@ -51,7 +51,14 @@ class PiutangController extends Controller
 
         $validateData = $request->validate($data);
 
-        DataPiutang::create($validateData);
+        $dataPiutang = DataPiutang::create($validateData);
+
+        $dataRekap = DataRekapTransaksi::create([
+            'id_piutang' => $dataPiutang->id,
+        ]);
+
+        $dataPiutang->save();
+        $dataRekap->save();
 
         return redirect('/piutang/create')->with('suksesPiutang', 'Data Piutang Berhasil Ditambahkan');
     }

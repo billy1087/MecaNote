@@ -14,8 +14,8 @@
                             <p>Pilih Bulan:</p>
                         </div>
                         <div class="col-5">
-                            <input type="month" name="bulan" class="form-control form-control text-start" id="colFormLabelSm"
-                                placeholder="col-form-label-sm">
+                            <input type="month" name="bulan" class="form-control form-control text-start"
+                                id="colFormLabelSm" placeholder="col-form-label-sm">
                         </div>
                         <div class="col-4">
                             <button type="submit" name="search"
@@ -34,7 +34,9 @@
                             @foreach ($rekapPiutang as $rkpi)
                                 @foreach ($rekapPengeluaran as $rkpnl)
                                     @foreach ($rekapHutang as $rkh)
-                                        <h6 class="my-0">Rp. {{ ($rkpe->pemasukan + $rkpi->piutang) - ($rkpnl->pengeluaran + $rkh->hutang) }}</h6>
+                                        <h6 class="my-0">Rp.
+                                            {{ $rkpe->pemasukan + $rkpi->piutang - ($rkpnl->pengeluaran + $rkh->hutang) }}
+                                        </h6>
                                     @endforeach
                                 @endforeach
                             @endforeach
@@ -63,25 +65,41 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($blnth as $tgl)
-                        @foreach ($pemasukan as $no => $pmk)
-                            @foreach ($piutang as $piu)
-                                @foreach ($pengeluaran as $pnl)
-                                    @foreach ($hutang as $htn)
-                                        <tr class="text-center">
-                                            <td>{{ ++$no }}</td>
-                                            <td>{{ $tgl->bulan . ' ' . $tgl->tahun }} </td>
-                                            <td>{{ $pmk->pemasukan }}</td>
-                                            <td>{{ $pnl->pengeluaran }}</td>
-                                            <td>{{ $htn->hutang }}</td>
-                                            <td>{{ $piu->piutang }}</td>
-                                        <tr>
-                                    @endforeach
-                                @endforeach
-                            @endforeach
-                        @endforeach
+                    @foreach ($transaksi as $no => $trans)
+                        <tr class="text-center">
+                            <td>{{ ++$no }}</td>
+                            <td>{{ $trans->bulan . ' ' . $trans->tahun }} </td>
+                            {{-- data pemasukan --}}
+                            @if ($trans->pemasukan == null)
+                                <td>0</td>
+                            @else
+                                <td>{{ $trans->pemasukan }}</td>
+                            @endif
+
+                            {{-- data pengeluaran --}}
+                            @if ($trans->pengeluaran == null)
+                                <td>0</td>
+                            @else
+                                <td>{{ $trans->pengeluaran }}</td>
+                            @endif
+
+                            {{-- data hutang --}}
+                            @if ($trans->hutang == null)
+                                <td>0</td>
+                            @else
+                                <td>{{ $trans->hutang }}</td>
+                            @endif
+
+                            {{-- data piutang --}}
+                            @if ($trans->piutang == null)
+                                <td>0</td>
+                            @else
+                                <td>{{ $trans->piutang }}</td>
+                            @endif
+                        <tr>
                     @endforeach
                 </tbody>
+
 
 
             </table>

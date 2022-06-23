@@ -37,7 +37,6 @@
                     <textarea class="form-control" name="keterangan" placeholder="Input Keterangan"></textarea>
                 </div>
                 <button type="submit" class="btn btn-success" name="psimpan">SIMPAN</button>
-                <button type="reset" class="btn btn-success" name="preset">KOSONGKAN</button>
             </form>
         </div>
     </div>

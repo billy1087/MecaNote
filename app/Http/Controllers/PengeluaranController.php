@@ -51,7 +51,14 @@ class PengeluaranController extends Controller
 
         $validateData = $request->validate($data);
 
-        DataPengeluaran::create($validateData);
+        $dataPengeluaran = DataPengeluaran::create($validateData);
+
+        $dataRekap = DataRekapTransaksi::create([
+            'id_pengeluaran' => $dataPengeluaran->id,
+        ]);
+
+        $dataPengeluaran->save();
+        $dataRekap->save();
 
         return redirect('/pengeluaran/create')->with('suksesPengeluaran', 'data Pengeluaran Berhasil Ditambahkan');
     }
